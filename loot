@@ -1,0 +1,7 @@
+import java.util.Random();
+
+public int loot() {
+  Random loot = new Random();
+  return loot.nextInt(15);
+  
+}
