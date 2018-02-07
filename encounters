@@ -1,0 +1,15 @@
+import java.util.Random;
+public String encounters() {
+  
+  Random encounters = new Random();
+  int random == encounters.nextint(2);
+  if (random = 0) {
+    return "loot";
+  }
+  if (random == 1) {
+    return "mob";
+  }
+  if (random == 2) {
+    return "elixir";
+  
+}
