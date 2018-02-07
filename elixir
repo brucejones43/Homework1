@@ -1,5 +1,5 @@
 import java.util.Random;
 
 public int elixir() {
-  Random elixir = new Ramdom();
+  Random elixir = new Random();
   return elixir.nextInt();
