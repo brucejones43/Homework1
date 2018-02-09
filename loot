@@ -1,15 +1,15 @@
 import java.util.Random();
 
-public static void Loot() {
+public static void Loot(Player name) {
 
   public void run() {
     Random loot = new Random();
     
     public int gold = loot.nextInt(12);
-    if (player.getPlayerClass.equals("Thief") {
+    if (name.getPlayerClass.equals("Thief") {
       gold = gold * 1.2;
     }
-    Player.onLoot(gold);
+    name.onLoot(gold);
     System.out.println("You found " + gold + " gold.");
   }
 }
