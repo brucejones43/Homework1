@@ -4,12 +4,12 @@ public String encounters() {
   Random encounters = new Random();
   int random == encounters.nextint(2);
   if (random = 0) {
-    loot.run();
+    Loot.run();
   }
   if (random == 1) {
-    monster.run();
+    Combat.run();
   }
   if (random == 2) {
-    elixir.run();
+    Elixir.run();
   
 }
