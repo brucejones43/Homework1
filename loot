@@ -6,6 +6,10 @@ public static void Loot() {
     Random loot = new Random();
     
     public int gold = loot.nextInt();
+    if (player.getClass.equals("Theif") {
+      gold = gold * 1.2;
+    }
     Player.onLoot(gold);
+    System.out.println("You found " + gold + " gold.");
   }
 }
