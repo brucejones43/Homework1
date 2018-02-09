@@ -1,7 +1,13 @@
 import java.util.Random();
 
-public int loot() {
-  Random loot = new Random();
-  return loot.nextInt(15);
-  
+public static void Loot() {
+
+  public void run() {
+    Random loot = new Random();
+    
+    public int getLoot(Player id);
+    int gold = id.getGold;
+    gold += loot.nextint(10);
+    Player.setGold(gold);
+  }
 }
