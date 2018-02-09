@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-import javax.management.loading.PrivateClassLoader;
 public class DungeonGame {
 	private DungeonMap map; 
 	private Player player;
@@ -58,9 +57,9 @@ public class DungeonGame {
 		int characterChoice = scanner.nextInt();
 		
 		if(characterChoice == 1) {
-			playerClass = "Warrior";
-			Player warrior = new Player();
-			choice.Player(playerClass);
+//			playerClass = "Warrior";
+//			Player warrior = new Player();
+			choice.Player(playerClass)//setPlayerClass
 			System.out.println("Your health is " + choice.getHealth());			
 			gameMap.setPLAYER_MAP_POSITION("W");
 		}
