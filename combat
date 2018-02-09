@@ -4,7 +4,7 @@ public class Combat(Player name){
 
   public void run() {
     Monster mob = new Monster;
-    System.out.println("You are fighting a " + mob.getMonsterType);
+    System.out.println("You are fighting a " + mob.getMonsterType());
     Scanner fightCommands = new Scanner(System.in);
     theCombat();
 
