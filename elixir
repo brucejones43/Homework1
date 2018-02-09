@@ -1,13 +1,13 @@
 import java.util.Random();
 
-public static void Elixir() {
+public static void Elixir(Player name) {
 
   public void run() {
     Random heal = new Random();
     
-    public int getHealth(Player id);
+    public int getHealth(name);
     int health = heal.nextInt(12);
-    player.onHeal(health)
+    name.onHeal(health)
     System.out.println("You gained " + health + " health");
   }
 }
