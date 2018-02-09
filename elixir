@@ -1,5 +1,13 @@
-import java.util.Random;
+import java.util.Random();
 
-public int elixir() {
-  Random elixir = new Random();
-  return elixir.nextInt();
+public static void Elixir() {
+
+  public void run() {
+    Random heal = new Random();
+    
+    public int getHealth(Player id);
+    int health = id.getHealth;
+    health += heal.nextint(10);
+    Player.setHealth(health);
+  }
+}
