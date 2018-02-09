@@ -9,7 +9,7 @@ public class Player {
 
     // Set Player characteristics based on
     // the receiving player class.
-    public Player(String playerClass) {
+    public void Player(String playerClass) {
         switch (playerClass) {
             case "Warrior":
                 this.playerClass = playerClass;
@@ -22,10 +22,6 @@ public class Player {
                 this.damage = 10;
                 break;
         }
-    }
-    
-    public String getPlayerClass() {
-        return playerClass;
     }
 
     public int getHealth() {
