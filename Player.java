@@ -23,6 +23,10 @@ public class Player {
                 break;
         }
     }
+    
+    public String getPlayerClass() {
+        return playerClass;
+    }
 
     public int getHealth() {
         return health;
