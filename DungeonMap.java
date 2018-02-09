@@ -52,7 +52,8 @@ public class DungeonMap {
 		room[playerYPosition][playerXPosition] = whatToPut;
 	}
 	public void movePlayerUp(){
-		boolean willMoveBeInBounds = (playerYPosition - 1) > 0;if (willMoveBeInBounds) {playerYPosition--;
+		boolean willMoveBeInBounds = (playerYPosition - 1) > 0;
+		if (willMoveBeInBounds) {playerYPosition--;
 		}
 		else{
 			System.out.println("Cannot move up.");
