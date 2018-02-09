@@ -5,7 +5,7 @@ public static void Loot() {
   public void run() {
     Random loot = new Random();
     
-    public int gold = loot.nextInt();
+    public int gold = loot.nextInt(12);
     if (player.getPlayerClass.equals("Thief") {
       gold = gold * 1.2;
     }
