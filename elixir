@@ -6,7 +6,7 @@ public static void Elixir() {
     Random heal = new Random();
     
     public int getHealth(Player id);
-    int health = heal.nextInt();
+    int health = heal.nextInt(12);
     player.onHeal(health)
     System.out.println("You gained " + health + " health");
   }
