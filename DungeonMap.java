@@ -8,6 +8,8 @@ public class DungeonMap {
 	private final String EMPTY_MAP_POSITION = " ";
 	private final String PAST_MAP_POSITION = "#";
 	public String PLAYER_MAP_POSITION = "P";
+	Room xRoom = new Room();
+	
 	public void GameMap(int rows, int columns) {
 		playerXPosition = 1;
 		playerYPosition = 1;
@@ -53,7 +55,11 @@ public class DungeonMap {
 	}
 	public void movePlayerUp(){
 		boolean willMoveBeInBounds = (playerYPosition - 1) > 0;
-		if (willMoveBeInBounds) {playerYPosition--;
+		if (willMoveBeInBounds) {
+			if (room[playerYPosition - 1][playerXPosition].equals(" ")) {
+				xRoom.enter(player);
+			}
+			playerYPosition--;
 		}
 		else{
 			System.out.println("Cannot move up.");
@@ -62,6 +68,9 @@ public class DungeonMap {
 	public void movePlayerDown(){
 		boolean willMoveBeInBounds = (playerYPosition + 1) < (room.length - 1);
 		if (willMoveBeInBounds) {
+			if (room[playerYPosition + 1][playerXPosition].equals(" ")) {
+				xRoom.enter(player);
+			}
 			playerYPosition++;
 		}
 		else{
@@ -71,6 +80,9 @@ public class DungeonMap {
 	public void movePlayerLeft(){
 		boolean willMoveBeInBounds = (playerXPosition - 1) > 0;
 		if (willMoveBeInBounds) {
+			if (room[playerYPosition][playerXPosition - 1].equals(" ")) {
+				xRoom.enter(player);
+			}
 			playerXPosition--;
 		}
 		else{
@@ -80,6 +92,9 @@ public class DungeonMap {
 	public void movePlayerRight(){
 		boolean willMoveBeInBounds = (playerXPosition + 1) < (room[playerYPosition].length - 1);
 		if (willMoveBeInBounds) {
+			if (room[playerYPosition][playerXPosition + 1].equals(" ")) {
+				xRoom.enter(player);
+			}
 			playerXPosition++;
 		}
 		else
@@ -93,5 +108,19 @@ public class DungeonMap {
 	public void setPLAYER_MAP_POSITION(String PLAYER_MAP_POSITION) {		
 		this.PLAYER_MAP_POSITION = PLAYER_MAP_POSITION;
 	}
+/*	public boolean mapFull(boolean full) {
+		int rows = 0;
+		int columns = 0;
+		room = new String[rows][columns];
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < columns; j++) {
+				if(EMPTY_MAP_POSITION.equals(room[i][j])) {
+					full = false;
+
+			}					
+		}
+
+	}		return full;
+	}*/
 }
 
