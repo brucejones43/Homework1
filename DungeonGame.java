@@ -16,7 +16,7 @@ public class DungeonGame {
 		System.out.println(player.getHealth());
 		System.out.println(player.getGold());
 
-		while ((player.getHealth() >= 0) && (player.getGold() < 100)/* && (gameMap.mapFull(true) == false)*/) {
+		while ((player.getHealth() > 0) && (player.getGold() < 100)/* && (gameMap.mapFull(true) == false)*/) {
 
 			gameMessage();
 			gameMap.print();
