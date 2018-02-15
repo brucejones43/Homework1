@@ -24,6 +24,10 @@ public class Player {
         }
     }
 
+    public String getPlayerClass() {
+        return playerClass;
+    }
+    
     public int getHealth() {
         return health;
     }
