@@ -1,6 +1,6 @@
 import java.util.Scanner; 
 
-public class Combat(Player name){
+public class Combat(){
 
   public void run() {
     Monster mob = new Monster;
