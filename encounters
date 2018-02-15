@@ -1,15 +1,17 @@
 import java.util.Random;
-public String encounters() {
-  
-  Random encounters = new Random();
-  int random == encounters.nextint(2);
-  if (random = 0) {
-    Loot.run();
+public class Encounters() {
+  public void encounters() {
+
+    Random encounters = new Random();
+    int random == encounters.nextint(2);
+    if (random = 0) {
+      Loot.run();
+    }
+    if (random == 1) {
+      Combat.run();
+    }
+    if (random == 2) {
+      Elixir.run();
+
   }
-  if (random == 1) {
-    Combat.run();
-  }
-  if (random == 2) {
-    Elixir.run();
-  
 }
