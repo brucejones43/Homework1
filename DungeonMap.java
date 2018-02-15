@@ -1,7 +1,7 @@
 
 public class DungeonMap {
 	private String[][] room;
-	private Player player;
+	//private Player player;
 	private int playerXPosition;
 	private int playerYPosition;
 	private final String WALL_MAP_POSITION = "*";
@@ -10,12 +10,12 @@ public class DungeonMap {
 	public String PLAYER_MAP_POSITION = "P";
 	Room xRoom = new Room();
 	
-	public void GameMap(int rows, int columns) {
+	public void GameMap(int rows, int columns, Player player) {
 		playerXPosition = 1;
 		playerYPosition = 1;
-		generateMap(rows, columns);
+		generateMap(rows, columns, player);
 	}
-	public void generateMap(int rows, int columns) {
+	public void generateMap(int rows, int columns, Player player) {
 		room = new String[rows][columns];
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < columns; j++) {
@@ -53,7 +53,7 @@ public class DungeonMap {
 	private void putOnMap(String whatToPut) {
 		room[playerYPosition][playerXPosition] = whatToPut;
 	}
-	public void movePlayerUp(){
+	public void movePlayerUp(Player player){
 		boolean willMoveBeInBounds = (playerYPosition - 1) > 0;
 		if (willMoveBeInBounds) {
 			if (room[playerYPosition - 1][playerXPosition].equals(" ")) {
@@ -65,7 +65,7 @@ public class DungeonMap {
 			System.out.println("Cannot move up.");
 		}
 	}
-	public void movePlayerDown(){
+	public void movePlayerDown(Player player){
 		boolean willMoveBeInBounds = (playerYPosition + 1) < (room.length - 1);
 		if (willMoveBeInBounds) {
 			if (room[playerYPosition + 1][playerXPosition].equals(" ")) {
@@ -77,7 +77,7 @@ public class DungeonMap {
 			System.out.println("Cannot move down.");
 		}
 	}
-	public void movePlayerLeft(){
+	public void movePlayerLeft(Player player){
 		boolean willMoveBeInBounds = (playerXPosition - 1) > 0;
 		if (willMoveBeInBounds) {
 			if (room[playerYPosition][playerXPosition - 1].equals(" ")) {
@@ -89,7 +89,7 @@ public class DungeonMap {
 			System.out.println("Cannot move left.");
 		}
 	}
-	public void movePlayerRight(){
+	public void movePlayerRight(Player player){
 		boolean willMoveBeInBounds = (playerXPosition + 1) < (room[playerYPosition].length - 1);
 		if (willMoveBeInBounds) {
 			if (room[playerYPosition][playerXPosition + 1].equals(" ")) {

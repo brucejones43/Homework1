@@ -10,7 +10,7 @@ public class DungeonGame {
 		mapSize();
 		intro();
 		
-		gameMap.GameMap(gameMapXY, gameMapXY);
+		gameMap.GameMap(gameMapXY, gameMapXY, player);
 		gameMap.print();
 		System.out.println(player.getPlayerClass());
 		System.out.println(player.getHealth());
@@ -45,16 +45,16 @@ public class DungeonGame {
 		String key = keyInput.next();
 		switch (key.toUpperCase()) {
 		case "W":
-			gameMap.movePlayerUp();
+			gameMap.movePlayerUp(player);
 			break;
 		case "S":
-			gameMap.movePlayerDown();
+			gameMap.movePlayerDown(player);
 			break;
 		case "A":
-			gameMap.movePlayerLeft();
+			gameMap.movePlayerLeft(player);
 			break;
 		case "D":
-			gameMap.movePlayerRight();
+			gameMap.movePlayerRight(player);
 			break;
 		default:
 			System.out.println("invalid move");

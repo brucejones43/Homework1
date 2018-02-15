@@ -1,7 +1,7 @@
 public class Player {
 
     private int health;
-    private int gold = 0;
+    private double gold = 0;
     private int damage;
     private String playerClass;
     private double lootModifier;
@@ -24,15 +24,13 @@ public class Player {
         }
     }
 
-    public String getPlayerClass() {
-        return playerClass;
-    }
-    
+    public String getPlayerClass() {return playerClass;}
+
     public int getHealth() {
         return health;
     }
 
-    public int getGold() {
+    public double getGold() {
         return gold;
     }
 
@@ -44,7 +42,7 @@ public class Player {
         this.health = health;
     }
 
-    public void setGold(int gold){
+    public void setGold(double gold){
         this.gold = gold;
     }
 
@@ -60,7 +58,7 @@ public class Player {
         this.health += health;
     }
 
-    public void onLoot(int gold) {
+    public void onLoot(double gold) {
         this.gold += gold;
     }
 }
